@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Security: only this site's own files, the contact form service and the analytics
+       services listed here are allowed to load or receive data -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self'; font-src 'self'; img-src 'self' data: https://alexa8star.goatcounter.com https://*.google-analytics.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com; connect-src 'self' https://api.web3forms.com https://alexa8star.goatcounter.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Alexandra Chin | Software engineer</title>
+  <meta name="description" content="Alexandra Chin is a software engineer who builds field-deployed systems for government customers, working directly with the people who use them.">
+  <meta property="og:title" content="Alexandra Chin">
+  <meta property="og:description" content="Software engineer building field-deployed systems, from operator interviews to running hardware.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alexandrachin.github.io/">
+  <meta property="og:image" content="https://alexandrachin.github.io/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alexandra Chin, software engineer at MIT Lincoln Laboratory. I build field-deployed systems for government customers, working directly with the people who use them.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://alexandrachin.github.io/">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#14161a">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Alexandra Chin</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#papers">Papers</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= INTRO ================= -->
+    <div class="wrap hero">
+      <h1>Alexandra Chin</h1>
+      <p class="role">Software engineer at MIT Lincoln Laboratory</p>
+      <p class="intro">
+        I build field-deployed systems for government customers, working
+        directly with the people who use them.
+      </p>
+      <div class="actions">
+        <a class="button" href="assets/Alexandra_Chin_Resume.pdf" download>Download résumé</a>
+        <a class="button quiet" href="contact.html">Send me a message</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+
+      <!-- ================= ABOUT ================= -->
+      <section class="block" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <div class="content">
+          <p>
+            I'm a software engineer with more than three years of experience
+            building field-deployed systems for government customers. I work
+            directly with end users, turning field requirements into tailored
+            software, and I'm often the glue between cross-functional teams.
+          </p>
+          <p>
+            Before that I did human-computer interaction research at the MIT
+            Media Lab and EPFL, and studied computer science and mathematics at
+            Wellesley College. I'm now looking to bring hands-on technical
+            experience and customer-facing problem-solving to an innovative role.
+          </p>
+
+          <h3 class="subhead">Core strengths</h3>
+          <ul class="tags" aria-label="Core strengths">
+            <li>Field integration and deployment</li>
+            <li>Rapid prototyping</li>
+            <li>Customer-facing technical delivery</li>
+            <li>Cross-functional collaboration</li>
+            <li>Embedded systems</li>
+            <li>Hardware-in-the-loop testing</li>
+          </ul>
+
+          <h3 class="subhead">Technical skills</h3>
+          <ul class="tags" aria-label="Technical skills">
+            <li>Java</li>
+            <li>Python</li>
+            <li>React</li>
+            <li>Linux (bash, systemd services)</li>
+            <li>Raspberry Pi</li>
+            <li>GitHub</li>
+            <li>AI-assisted programming</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= EXPERIENCE ================= -->
+      <section class="block" id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+        <div class="content">
+          <!-- To add a job, copy one <li>…</li> block; newest first -->
+          <ol class="entries">
+            <li>
+              <div class="when">Aug 2023 to present</div>
+              <div class="entry">
+                <h3>Software Engineer</h3>
+                <p class="where">MIT Lincoln Laboratory, Homeland Protection Systems (Groups 46 and 45), Lexington, MA</p>
+                <ul class="points">
+                  <li>Hardened end-to-end deployment processes from development machines to edge devices (Raspberry Pi 2, Pi 5, Jetson, i.MX8) using Ansible and Docker.</li>
+                  <li>Designed and delivered a hardware/software prototype (Raspberry Pi, network switches, ZMQ messaging bus, React), from interviewing device operators about their workflow, through building the web application with them in a tight feedback loop, to running the full stack on physical hardware.</li>
+                  <li>Validated signal integrity across a cybersecurity shim from radio controller to flight controller (STM32 dev boards, RadioMaster and XBee radios, custom breakout and logic boards), using a logic analyzer to confirm correct packet and telemetry flow and debugging across the software-firmware boundary.</li>
+                  <li>Coordinated with sensor and algorithm teams to rapidly integrate new capabilities into a modular US air defense software system.</li>
+                  <li>Configured the tactical display front end and multi-source correlator tracker for an operational Java application that routed track data from aircraft and unmanned aerial systems.</li>
+                  <li>Conducted on-site engineering checkouts and supported flight tests to tune radar, convert and transfer data, and configure operator displays, working with operators, field service, IT and software teams to match data presentation to real operational needs.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="when">Jun 2021 to Aug 2021</div>
+              <div class="entry">
+                <h3>Research Intern, Summer@EPFL</h3>
+                <p class="where">CHILI Lab (Computer-Human Interaction in Learning and Instruction), EPFL, Lausanne, Switzerland</p>
+                <ul class="points">
+                  <li>Helped design and run a study on collaborative robot-student learning, coordinating directly with student participants.</li>
+                  <li>Analyzed robot-student collaboration data (pandas, matplotlib, statistical methods) and presented findings to the research team to inform the next stage of the study.</li>
+                  <li>Co-authored a paper accepted to IEEE RO-MAN 2022 and nominated for Best Student Paper.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="when">Jun 2020 to Jun 2021</div>
+              <div class="entry">
+                <h3>UROP Researcher</h3>
+                <p class="where">MIT Media Lab, Cambridge, MA</p>
+                <ul class="points">
+                  <li>Led user studies and UX design for Project Us, a communications technology suite that uses physiological and audio signals to promote empathy between users.</li>
+                  <li>Met directly with study participants to gather feedback and iterate on NLP algorithms and hardware/software prototypes.</li>
+                  <li>Co-authored a paper published at CHI 2022.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+
+          <h3 class="subhead">Education</h3>
+          <ol class="entries">
+            <li>
+              <div class="when">Class of 2023</div>
+              <div class="entry">
+                <h3>BA in Computer Science, Mathematics minor</h3>
+                <p class="where">Wellesley College</p>
+                <p>Cum laude, GPA 3.62.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+      <section class="block" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <div class="content">
+          <!-- To add a project, copy one <li>…</li> block. A project can also have links:
+               <ul class="links"><li><a href="https://…">View the code</a></li></ul> -->
+          <ul class="entries">
+            <li>
+              <div class="when">MIT Lincoln Laboratory</div>
+              <div class="entry">
+                <h3>Air defense software integration</h3>
+                <p>
+                  Integrated new sensor and algorithm capabilities into a
+                  modular US air defense software system, configured its
+                  tactical display and tracker, and supported on-site checkouts
+                  and flight tests with operators.
+                </p>
+                <ul class="tags" aria-label="Tools used">
+                  <li>Java</li>
+                  <li>Radar</li>
+                  <li>Field testing</li>
+                </ul>
+                <ul class="links">
+                  <li><a href="https://www.ll.mit.edu/ll-publications/2025-impact-report/our-mission-impact/safeguarding-skies">Read "Safeguarding the Skies" in Lincoln Laboratory's 2025 Impact Report</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="when">MIT Lincoln Laboratory</div>
+              <div class="entry">
+                <h3>Operator web application on edge hardware</h3>
+                <p>
+                  A hardware and software prototype built with the device
+                  operators who use it. I interviewed them about their workflow,
+                  designed and built the web application with them, and ran the
+                  full stack on physical hardware.
+                </p>
+                <ul class="tags" aria-label="Tools used">
+                  <li>Raspberry Pi</li>
+                  <li>React</li>
+                  <li>ZMQ</li>
+                  <li>Network switches</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="when">MIT Lincoln Laboratory</div>
+              <div class="entry">
+                <h3>Signal validation for a cybersecurity shim</h3>
+                <p>
+                  Confirmed that packets and telemetry flow correctly through a
+                  shim placed between a radio controller and a flight
+                  controller, debugging across the software-firmware boundary.
+                </p>
+                <ul class="tags" aria-label="Tools used">
+                  <li>STM32</li>
+                  <li>Logic analyzer</li>
+                  <li>RadioMaster and XBee radios</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="when">MIT Media Lab</div>
+              <div class="entry">
+                <h3>Project Us</h3>
+                <p>
+                  A communications technology suite that uses physiological and
+                  audio signals to promote empathy between users. I led the user
+                  studies and UX design.
+                </p>
+                <ul class="tags" aria-label="Tools used">
+                  <li>User studies</li>
+                  <li>UX design</li>
+                  <li>NLP</li>
+                </ul>
+                <ul class="links">
+                  <li><a href="https://doi.org/10.1145/3491101.3519797">Read the paper</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= PAPERS ================= -->
+      <section class="block" id="papers" aria-labelledby="papers-title">
+        <h2 id="papers-title">Papers</h2>
+        <div class="content">
+          <ul class="entries">
+            <li>
+              <div class="when">2022</div>
+              <div class="entry">
+                <h3>Efficacy of a &lsquo;Misconceiving&rsquo; Robot to Improve Computational Thinking in a Collaborative Problem Solving Activity: A Pilot Study</h3>
+                <p class="authors">Utku Norman, <strong>Alexandra Chin</strong>, Barbara Bruno, Pierre Dillenbourg</p>
+                <p class="venue">IEEE RO-MAN 2022. Nominated for Best Student Paper.</p>
+                <ul class="links">
+                  <li><a href="https://infoscience.epfl.ch/record/294825/files/norman_2022_efficacy.pdf">Read the PDF</a></li>
+                  <li><a href="https://doi.org/10.1109/RO-MAN53752.2022.9900775">DOI</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="when">2022</div>
+              <div class="entry">
+                <h3>Towards Enhancing Empathy Through Emotion Augmented Remote Communication</h3>
+                <p class="authors">Camilo Rojas, Eugenio Zuccarelli, <strong>Alexandra Chin</strong>, Gaurav Patekar, David Esquivel, Pattie Maes</p>
+                <p class="venue">CHI 2022 Extended Abstracts</p>
+                <ul class="links">
+                  <li><a href="https://hdl.handle.net/1721.1/146091">Read the open-access copy</a></li>
+                  <li><a href="https://doi.org/10.1145/3491101.3519797">DOI</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= AWARDS ================= -->
+      <section class="block" id="awards" aria-labelledby="awards-title">
+        <h2 id="awards-title">Leadership and awards</h2>
+        <div class="content">
+          <h3 class="subhead first">Leadership and teaching</h3>
+          <ul class="points">
+            <li>Gordon-MIT Engineering Leadership Program, mentor and participant</li>
+            <li>Lincoln Laboratory Radar Introduction for Student Engineers, volunteer lecturer</li>
+            <li>STEM to SHTEM Summer Program, mentor</li>
+          </ul>
+
+          <h3 class="subhead">Awards</h3>
+          <ul class="points">
+            <li>Clare Boothe Luce Scholar, 2021</li>
+            <li>NCWIT Collegiate Award, National Honorable Mention, 2021</li>
+            <li>A Better Chance Scholar</li>
+          </ul>
+
+          <h3 class="subhead">Affiliations</h3>
+          <ul class="points">
+            <li>Girls Who Code</li>
+            <li>Rewriting the Code</li>
+            <li>Girl Scouts of the USA</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= INVITATION ================= -->
+      <section class="block invite" aria-labelledby="invite-title">
+        <h2 id="invite-title">Have a role, a project or a question for me?</h2>
+        <div class="content actions">
+          <a class="button" href="contact.html">Send me a message</a>
+          <a class="button quiet" href="https://www.linkedin.com/in/alexachin">Connect on LinkedIn</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span data-year>2026</span> Alexandra Chin</p>
+      <!-- Add more profile links here, for example GitHub -->
+      <ul>
+        <li><a href="https://www.linkedin.com/in/alexachin">LinkedIn</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+</body>
+</html>

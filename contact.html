@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Security: only this site's own files, the contact form service and the analytics
+       services listed here are allowed to load or receive data -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self'; font-src 'self'; img-src 'self' data: https://alexa8star.goatcounter.com https://*.google-analytics.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com; connect-src 'self' https://api.web3forms.com https://alexa8star.goatcounter.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Contact | Alexandra Chin</title>
+  <meta name="description" content="Send a message to Alexandra Chin.">
+  <link rel="canonical" href="https://alexandrachin.github.io/contact.html">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#14161a">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Alexandra Chin</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#papers">Papers</a></li>
+          <li><a href="index.html#awards">Awards</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <div class="page-head">
+      <h1>Send me a message</h1>
+      <p>Your message goes straight to my inbox. I usually reply within a few days.</p>
+    </div>
+
+    <form class="contact-form" id="contact-form" data-clarity-mask="true" action="https://api.web3forms.com/submit" method="POST" novalidate>
+
+      <!-- Web3Forms access key (public by design) -->
+      <input type="hidden" name="access_key" value="54d3dc57-3e6b-4922-861e-fb60adbec00e">
+
+      <!-- The subject line of the email you receive -->
+      <input type="hidden" name="subject" value="New message from your website">
+      <input type="hidden" name="from_name" value="Personal website">
+
+      <!-- Spam trap: people never see this, bots tick it -->
+      <div class="trap" aria-hidden="true">
+        <label>Leave this box empty
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-problem">
+        <span class="problem" id="name-problem" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Your email</label>
+        <span class="hint" id="email-hint">So I can write back. It isn't shared or added to any list.</span>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-problem">
+        <span class="problem" id="email-problem" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required aria-describedby="message-problem"></textarea>
+        <span class="problem" id="message-problem" role="alert"></span>
+      </div>
+
+      <button class="button" type="submit">Send message</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span data-year>2026</span> Alexandra Chin</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/alexachin">LinkedIn</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+</body>
+</html>

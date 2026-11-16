@@ -1,0 +1,670 @@
+/* ==========================================================================
+   Personal site styles
+   Change the look in one place: the custom properties in :root below.
+   ========================================================================== */
+
+/* Fonts are served from this site (fonts/ folder), not from a third party */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/atkinson-hyperlegible-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colour */
+  --bg: #14161a;          /* graphite page background */
+  --surface: #1b1e24;     /* form fields, raised areas */
+  --line: #2b2f38;        /* hairlines and borders */
+  --text: #e6e3dc;        /* soft white body text */
+  --muted: #a0a3ab;       /* dates, secondary text */
+  --accent: #a9b8ff;      /* links, focus, buttons */
+  --accent-ink: #12141c;  /* text on top of the accent */
+  --error: #ffb4a8;
+  --success: #a8e0bf;
+
+  /* Type */
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+
+  /* Layout */
+  --page: 68rem;
+  --rail: 11rem;          /* left column that holds section titles */
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0 0 1em;
+  max-width: 62ch;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: -4rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.5rem 0.9rem;
+  border-radius: 4px;
+  z-index: 20;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.4rem;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: 0.35rem 0;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current] {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+/* Hero -------------------------------------------------------------------- */
+
+.hero {
+  padding-block: clamp(3.5rem, 11vw, 8rem) clamp(3rem, 8vw, 6rem);
+}
+
+.hero h1 {
+  font-size: clamp(2.75rem, 9vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+}
+
+.hero .role {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  color: var(--muted);
+  margin: 1.1rem 0 1.5rem;
+}
+
+.hero .intro {
+  font-size: 1.1875rem;
+  max-width: 52ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-block;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.8rem 1.25rem;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--accent-ink);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #c3ceff;
+  border-color: #c3ceff;
+}
+
+.button.quiet {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.button.quiet:hover {
+  border-color: var(--accent);
+  background: transparent;
+}
+
+.button[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* Sections: title in a left rail, content on the right --------------------- */
+
+.block {
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, 1fr);
+  gap: 1rem var(--gutter);
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+  border-top: 1px solid var(--line);
+}
+
+.block > h2 {
+  font-size: 1.25rem;
+  color: var(--muted);
+  font-weight: 500;
+  position: sticky;
+  top: 5rem;
+  align-self: start;
+}
+
+.block > .content > :last-child {
+  margin-bottom: 0;
+}
+
+.subhead {
+  font-size: 1.0625rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin: 2.75rem 0 1.5rem;
+}
+
+/* Entries: a date column and a body, used by experience, projects, papers -- */
+
+.entries > li {
+  display: grid;
+  grid-template-columns: 10.5rem minmax(0, 1fr);
+  gap: 0.25rem 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.entries > li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.entries > li:last-child {
+  padding-bottom: 0;
+}
+
+.when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9375rem;
+  padding-top: 0.2rem;
+}
+
+.entry h3 {
+  font-size: 1.3125rem;
+}
+
+.entry .where {
+  color: var(--muted);
+  margin: 0.2rem 0 0.7rem;
+}
+
+.entry p:last-child {
+  margin-bottom: 0;
+}
+
+.points {
+  list-style: disc;
+  padding-left: 1.1rem;
+  max-width: 62ch;
+}
+
+.points li {
+  margin-bottom: 0.35rem;
+}
+
+.points li::marker {
+  color: var(--muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+}
+
+.tags li {
+  font-size: 0.875rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.1rem 0.65rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-top: 0.8rem;
+}
+
+.authors {
+  color: var(--muted);
+  margin: 0.25rem 0 0;
+}
+
+.authors strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.venue {
+  font-style: italic;
+  margin: 0.15rem 0 0;
+}
+
+/* Closing invitation ------------------------------------------------------- */
+
+.invite h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  letter-spacing: -0.02em;
+  color: var(--text);
+  font-weight: 600;
+  position: static;
+  grid-column: 1 / -1;
+  max-width: 22ch;
+}
+
+.invite .content {
+  grid-column: 1 / -1;
+}
+
+/* Contact page ------------------------------------------------------------- */
+
+.page-head {
+  padding-block: clamp(3rem, 8vw, 5.5rem) 2.5rem;
+}
+
+.page-head h1 {
+  font-size: clamp(2.25rem, 7vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.page-head p {
+  margin: 1.1rem 0 0;
+  font-size: 1.1875rem;
+  color: var(--muted);
+  max-width: 48ch;
+}
+
+.contact-form {
+  max-width: 36rem;
+  padding-bottom: clamp(3rem, 8vw, 6rem);
+}
+
+.field {
+  margin-bottom: 1.4rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.field .hint {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--muted);
+  margin: -0.2rem 0 0.45rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid #454a56;
+  border-radius: 6px;
+  padding: 0.75rem 0.9rem;
+}
+
+.field textarea {
+  min-height: 11rem;
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.field .problem {
+  display: block;
+  color: var(--error);
+  font-size: 0.9375rem;
+  margin-top: 0.4rem;
+}
+
+.field .problem:empty {
+  display: none;
+}
+
+.field [aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+/* Hidden from people, visible to spam bots */
+.trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-status {
+  margin: 1.25rem 0 0;
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  border-left-width: 4px;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status.ok {
+  border-left-color: var(--success);
+}
+
+.form-status.bad {
+  border-left-color: var(--error);
+}
+
+/* Footer ------------------------------------------------------------------- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  padding-top: 1.75rem;
+  padding-bottom: 2.25rem;
+}
+
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Small screens ------------------------------------------------------------ */
+
+@media (max-width: 46rem) {
+  .block {
+    grid-template-columns: 1fr;
+  }
+
+  .block > h2 {
+    position: static;
+    margin-bottom: 0.5rem;
+  }
+
+  .entries > li {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  html {
+    scroll-padding-top: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media print {
+  .site-header,
+  .actions,
+  .invite,
+  .site-footer ul {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  a,
+  .when,
+  .where,
+  .authors,
+  .block > h2 {
+    color: #000;
+  }
+}
+
+/* Space between an entry's title and the paragraph that follows it */
+.entry h3 + p:not(.where):not(.authors) {
+  margin-top: 0.5rem;
+}
+
+/* A sub-heading that opens a section needs no space above it */
+.subhead.first {
+  margin-top: 0;
+}
+
+.subhead + .tags {
+  margin-top: 0;
+}
+
+.subhead:has(+ .tags),
+.subhead:has(+ .points) {
+  margin-bottom: 0.9rem;
+}
+
+.invite .actions {
+  margin-top: 0.5rem;
+}
+
+/* Privacy page text -------------------------------------------------------- */
+
+.prose {
+  max-width: 40rem;
+  padding-bottom: clamp(3rem, 8vw, 6rem);
+}
+
+.prose h2 {
+  font-size: 1.3125rem;
+  margin: 2.25rem 0 0.6rem;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+#consent-state {
+  color: var(--muted);
+}
+
+#consent-state:empty {
+  display: none;
+}
+
+/* Analytics consent box ---------------------------------------------------- */
+
+.consent {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 30;
+  max-width: 34rem;
+  margin-left: auto;
+  padding: 1.1rem 1.25rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid #454a56;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  font-size: 0.9375rem;
+}
+
+.consent p {
+  margin: 0 0 0.9rem;
+  max-width: none;
+}
+
+.consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.consent .button {
+  padding: 0.6rem 1rem;
+}
+
+.prose .points {
+  margin-bottom: 1em;
+}
+
+.prose .updated {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  margin-top: 2rem;
+}
