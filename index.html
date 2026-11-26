@@ -164,41 +164,77 @@
       </section>
 
       <!-- ================= PROJECTS ================= -->
-      <section class="block" id="projects" aria-labelledby="projects-title">
+      <section class="block gallery" id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title">Projects</h2>
         <div class="content">
-          <!-- To add a project, copy one <li>…</li> block. A project can also have links:
+          <!-- To add a project, copy one <li class="card">…</li> block. A project can also have links:
                <ul class="links"><li><a href="https://…">View the code</a></li></ul> -->
-          <ul class="entries">
-            <li>
-              <div class="when">MIT Lincoln Laboratory</div>
-              <div class="entry">
-                <h3>Air defense software integration</h3>
+          <h3 class="subhead first">Personal projects</h3>
+          <ul class="cards">
+            <li class="card">
+              <img class="card-photo" src="assets/drizzlewick.jpg" width="900" height="1200" loading="lazy"
+                   style="object-position: center 62%"
+                   alt="A Raspberry Pi Pico 2 W with its green status light on, connected by an orange USB cable and resting beside a blank Waveshare 7.5-inch e-ink panel. Behind them, a laptop shows Waveshare's e-Paper pinout table.">
+              <div class="card-body">
+                <p class="card-kicker"><span class="badge">In progress</span></p>
+                <h4>Drizzlewick</h4>
+                <p>
+                  An e-ink screen that displays the weather. I like pi&ntilde;a
+                  coladas but hate getting caught in the rain! This display will
+                  live in my closet so I don't have to check my phone. I'm
+                  building it from scratch: a Raspberry Pi Pico 2 W connects
+                  over SPI to an e-ink display driver board, which drives a
+                  Waveshare 7.5-inch raw e-ink display. The Pico is being
+                  programmed in MicroPython and will get updates via a REST API
+                  hosted on a friend's home server.
+                </p>
+                <ul class="tags" aria-label="Tools used">
+                  <li>Raspberry Pi Pico 2 W</li>
+                  <li>Waveshare 7.5" e-ink</li>
+                  <li>SPI</li>
+                  <li>MicroPython</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="subhead">Work projects</h3>
+          <ul class="cards">
+            <li class="card">
+              <img class="card-photo" src="assets/usafe.jpg" width="1600" height="994" loading="lazy"
+                   alt="Three people in a dim operations room work at desks below large wall displays showing a real-time air picture over a map of Europe.">
+              <div class="card-body">
+                <p class="card-kicker">MIT Lincoln Laboratory</p>
+                <h4>Air defense system integration</h4>
                 <p>
                   Integrated new sensor and algorithm capabilities into a
                   modular US air defense software system, configured its
                   tactical display and tracker, and supported on-site checkouts
                   and flight tests with operators.
                 </p>
+                <ul class="links">
+                  <li><a href="https://www.ll.mit.edu/ll-publications/2025-impact-report/our-mission-impact/safeguarding-skies">Read "Safeguarding the Skies" in Lincoln Laboratory's 2025 Impact Report</a></li>
+                </ul>
                 <ul class="tags" aria-label="Tools used">
                   <li>Java</li>
                   <li>Radar</li>
                   <li>Field testing</li>
-                </ul>
-                <ul class="links">
-                  <li><a href="https://www.ll.mit.edu/ll-publications/2025-impact-report/our-mission-impact/safeguarding-skies">Read "Safeguarding the Skies" in Lincoln Laboratory's 2025 Impact Report</a></li>
+                  <li>Cross-functional teamwork</li>
                 </ul>
               </div>
             </li>
-            <li>
-              <div class="when">MIT Lincoln Laboratory</div>
-              <div class="entry">
-                <h3>Operator web application on edge hardware</h3>
+            <li class="card">
+              <img class="card-photo contain" src="assets/pi4.png" width="860" height="860" loading="lazy"
+                   alt="A Raspberry Pi 4 single-board computer.">
+              <div class="card-body">
+                <p class="card-kicker">MIT Lincoln Laboratory</p>
+                <h4>Operator web application on edge hardware</h4>
                 <p>
                   A hardware and software prototype built with the device
                   operators who use it. I interviewed them about their workflow,
                   designed and built the web application with them, and ran the
-                  full stack on physical hardware.
+                  full stack on Raspberry Pi 4s with a manager node screen
+                  display.
                 </p>
                 <ul class="tags" aria-label="Tools used">
                   <li>Raspberry Pi</li>
@@ -208,38 +244,24 @@
                 </ul>
               </div>
             </li>
-            <li>
-              <div class="when">MIT Lincoln Laboratory</div>
-              <div class="entry">
-                <h3>Signal validation for a cybersecurity shim</h3>
+            <li class="card">
+              <img class="card-photo" src="assets/logic.png" width="750" height="480" loading="lazy"
+                   style="object-position: left top"
+                   alt="Logic analyzer software showing a decoded serial signal on channel 0, with I2C and SPI channels and a table of decoded packets.">
+              <div class="card-body">
+                <p class="card-kicker">MIT Lincoln Laboratory</p>
+                <h4>Signal validation for a cybersecurity shim</h4>
                 <p>
-                  Confirmed that packets and telemetry flow correctly through a
-                  shim placed between a radio controller and a flight
-                  controller, debugging across the software-firmware boundary.
+                  Confirmed that packets and telemetry flow correctly through
+                  shims placed on a radio controller and a flight controller,
+                  debugging across the software-firmware boundary. Debugged with
+                  the Rust Embassy framework, TTL cables, a logic analyzer,
+                  ExpressLRS, MAVLink and XCTU.
                 </p>
                 <ul class="tags" aria-label="Tools used">
                   <li>STM32</li>
                   <li>Logic analyzer</li>
                   <li>RadioMaster and XBee radios</li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="when">MIT Media Lab</div>
-              <div class="entry">
-                <h3>Project Us</h3>
-                <p>
-                  A communications technology suite that uses physiological and
-                  audio signals to promote empathy between users. I led the user
-                  studies and UX design.
-                </p>
-                <ul class="tags" aria-label="Tools used">
-                  <li>User studies</li>
-                  <li>UX design</li>
-                  <li>NLP</li>
-                </ul>
-                <ul class="links">
-                  <li><a href="https://doi.org/10.1145/3491101.3519797">Read the paper</a></li>
                 </ul>
               </div>
             </li>
